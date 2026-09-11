@@ -166,7 +166,7 @@ impl InodeWrapper {
         match self {
             InodeWrapper::V5(i) => i.is_blkdev(),
             InodeWrapper::V6(i) => i.is_blkdev(),
-            InodeWrapper::Ref(_i) => unimplemented!(),
+            InodeWrapper::Ref(i) => i.as_inode().is_blkdev(),
         }
     }
 
@@ -175,7 +175,7 @@ impl InodeWrapper {
         match self {
             InodeWrapper::V5(i) => i.is_fifo(),
             InodeWrapper::V6(i) => i.is_fifo(),
-            InodeWrapper::Ref(_i) => unimplemented!(),
+            InodeWrapper::Ref(i) => i.as_inode().is_fifo(),
         }
     }
 
