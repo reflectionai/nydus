@@ -153,3 +153,9 @@ vhost-user-backend = "0.21.0"
 
 # fuse-backend-rs which depends on rust-vmm
 fuse-backend-rs = "0.14.0"
+
+[patch.crates-io]
+# tar 0.4.46 splits PAX extended headers on newlines instead of honouring each
+# record's length prefix, so a value containing \n (a Git LFS pointer as a
+# symlink target) is unparseable. composefs/tar-rs#476.
+tar = { git = "https://github.com/gliush/tar-rs", tag = "v0.4.46-pax.1" }
