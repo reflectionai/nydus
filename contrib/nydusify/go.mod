@@ -135,4 +135,4 @@ require (
 
 replace github.com/containerd/containerd/v2 => github.com/nydusaccelerator/containerd/v2 v2.0.0-20250528024712-b96732f49d37
 
-replace github.com/containerd/nydus-snapshotter => github.com/reflectionai/nydus-snapshotter v0.0.0-20260926164310-fa063f4a151d
+replace github.com/containerd/nydus-snapshotter => github.com/reflectionai/nydus-snapshotter v0.0.0-20261120161829-5c14665d4f70
